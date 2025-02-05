@@ -65,9 +65,6 @@ O **IFIXTrack** é um projeto pessoal desenvolvido para acompanhar informações
 ## Contribuição
 Se você deseja contribuir com melhorias, envie um Pull Request com uma descrição detalhada das alterações propostas.
 
-## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
 ## Contato
-Kenay Gomes Nobre - [Seu LinkedIn](https://www.linkedin.com/in/seu-perfil)
+Kenay Gomes Nobre - [Seu LinkedIn]([https://www.linkedin.com/in/seu-perfil](https://www.linkedin.com/in/kenay-gomes-nobre-509498339/))
 
