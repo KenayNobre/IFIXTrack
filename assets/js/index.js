@@ -136,11 +136,8 @@ async function usuarioF(userId, user) {
                 if (!response.ok) {
                     throw new Error(data.message);
                 }
-
-                alert("Usuário atualizado");
                 window.location.reload()
             } catch (error) {
-                alert("Erro ao atualizar usuário");
             }
         }
     })
