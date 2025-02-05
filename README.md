@@ -66,5 +66,5 @@ O **IFIXTrack** é um projeto pessoal desenvolvido para acompanhar informações
 Se você deseja contribuir com melhorias, envie um Pull Request com uma descrição detalhada das alterações propostas.
 
 ## Contato
-Kenay Gomes Nobre - [Seu LinkedIn]([https://www.linkedin.com/in/seu-perfil](https://www.linkedin.com/in/kenay-gomes-nobre-509498339/))
+Kenay Gomes Nobre - [Meu LinkedIn](https://www.linkedin.com/in/kenay-gomes-nobre-509498339/)
 
