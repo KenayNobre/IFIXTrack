@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zen+Tokyo+Zoo&display=swap');
+
+:root {
+    --cor-principal: #1E1E1E;
+    --cor-secundaria: #DADADA;
+    --fonte-principal: "Quicksand", serif;
+    --fonte-secundaria: "Zen Tokyo Zoo", serif;
+  }
+  
+
+
+/*EFEITO BOTAO1*/
+/* From Uiverse.io by cssbuttons-io */ 
+.btn {
+    position: relative;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 100px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  
+  .btn::after {
+    background-color: #fff;
+  }
+  
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  
+
+/**/
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    overflow: hidden;
+}
+
+main{
+    background-color: var(--cor-principal) ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+/*INFORMATIONS*/
+
+.informations-section{
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    width: 49%;
+    box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.705);
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations-box{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 75%;
+    height: 90%;
+    text-align: center;
+}
+
+.informations-box h1{
+    font-family: var(--fonte-secundaria);
+    font-weight: normal;
+    font-size: 135px;
+    margin-top: 0px;
+    align-self: center;
+    width: 90%;
+}
+
+
+.informations-box p{
+    font-family: var(--fonte-principal);
+    font-weight: normal;
+    font-size: 40px;
+    letter-spacing: 15px;
+    margin-top: 15%;
+}
+
+.lines{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro do elemento esteja no meio da tela */
+    top: 50%;
+    left: 50%;
+}
+
+.lines div{
+    background-color: rgba(30, 30, 30, 0.05);
+    width: 10px;
+    height: 100vh;
+}
+
+.lines-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lines-title div{
+    background-color: black;
+    width: 100%;
+    height: 3.5px;
+}
+
+
+
+
+/*LOGIN*/
+
+.login-section{
+    background-color: var(--cor-principal);
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lines2{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro do elemento esteja no meio da tela */
+    top: 50%;
+    left: 50%;
+}
+
+.lines2 div{
+    background-color: rgba(218, 218, 218, 0.05);
+    width: 10px;
+    height: 100vh;
+}
+
+.login-box{
+    background-color: var(--cor-secundaria);
+    width: 55%;
+    height: 55%;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 25px;
+    z-index: 1;
+}
+
+.login-box form{
+    width: 100%;
+    height: 100%;
+}
+
+/*LOGIN/REGISTER*/
+
+.login-buttons{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-buttons button{
+    width: 50%;
+    height: 70%;
+    border: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 120%;
+    font-weight: normal;
+    transition: all 0.5 ease-in-out;
+    cursor: pointer;
+}
+
+.login-button{
+    border-radius: 50px 0px 0px 50px;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    box-shadow: inset -5px 5px 10px rgb(0, 0, 0);
+}
+
+.register-button{
+    border-radius: 0px 50px 50px 0px;
+    background-color: #fff;
+    color: var(--cor-principal);
+    box-shadow: none;
+}
+
+
+
+/*INPUTS*/
+
+.login-inputs{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-inputs input{
+    width: 100%;
+    height: 22%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+}
+
+.login-inputs input::placeholder{
+    font-family: var(--fonte-secundaria);
+}
+
+.login-inputs input:focus{
+    box-shadow: 0px 0px 10px #1E1E1E;
+}
+
+.input-nome{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/*BUTTON CONFIRM*/
+
+.login-confirm{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm{
+    color: #1E1E1E; 
+}
+
+.informations-box-login{
+    display: none;
+}
+
+
+/*MOBILE*/
+
+@media(max-width: 1650px){
+    .login-box{
+        width: 65%;
+    }
+
+    .informations-box h1{
+        font-size: 700%;
+    }
+    
+    
+    .informations-box p{
+        font-size: 250%;
+    }
+
+}
+
+@media(max-width: 1440px){
+
+    .informations-box h1{
+        font-size: 600%;
+    }
+    
+    
+    .informations-box p{
+        font-size: 230%;
+    }
+
+}
+
+@media(max-width: 1360px){
+    .login-box{
+        width: 75%;
+    }
+
+    .informations-box h1{
+        font-size: 500%;
+    }
+    
+    
+    .informations-box p{
+        font-size: 30px;
+        margin-top: 25%;
+        letter-spacing: 10px;
+    }
+
+
+}
+
+
+@media(max-width: 1022px){
+
+    .informations-box-login{
+        display: flex;
+    }
+
+    .login-section{
+        width: 100%;
+        flex-direction: column;    
+    }
+
+    .informations-section{
+        display: none;
+    }
+
+    .login-box{
+        width: 60%;
+    }
+
+    .informations-box{
+        position: absolute;
+        color: #DADADA;
+    }
+
+    .lines-title div{
+        background-color: #DADADA;
+    }
+
+    .informations-box h1{
+        font-size: 500%;
+        width: 60%;
+    }
+    
+    
+    .informations-box p{
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 750px){
+
+    .login-box{
+        width: 70%;
+        
+    }
+
+    .informations-box h1{
+        font-size: 450%;
+        width: 70%;
+    }
+    
+
+}
+
+@media(max-width: 600px){
+
+    .login-box{
+        width: 80%;
+        
+    }
+
+    .informations-box h1{
+        font-size: 450%;
+        width: 80%;
+    }
+    
+
+}
+
+@media(max-width: 500px){
+
+    .login-box{
+        width: 90%;
+        
+    }
+
+    .informations-box h1{
+        font-size: 300%;
+        width: 90%;
+    }
+    
+
+}

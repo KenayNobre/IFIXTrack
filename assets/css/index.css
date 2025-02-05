@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zen+Tokyo+Zoo&display=swap');
+
+:root {
+    --cor-principal: #1E1E1E;
+    --cor-secundaria: #DADADA;
+    --fonte-principal: "Quicksand", serif;
+    --fonte-secundaria: "Zen Tokyo Zoo", serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: var(--cor-secundaria);
+    overflow-x: hidden;
+}
+
+header{
+    background-color: var(--cor-principal);
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+    padding: 0px 20px;
+    position: relative;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 250%;
+    color: var(--cor-secundaria);
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro do elemento esteja no meio da tela */
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+/*USUARIO*/
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.user-name{
+    text-transform: uppercase;
+}
+
+
+.user-edit-box{
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    background-color: var(--cor-principal);
+    right: 0;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 10px;
+    color: #DADADA;
+    padding: 10px;
+    font-family: var(--fonte-principal);
+    transition: all 0.2s ease-in-out;
+    display: none;
+    z-index: 99;
+}
+
+.user-edit-box hr{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+}
+
+.user-edit-box input{
+    width: 100%;
+    height: 25%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: var(--fonte-principal);
+    margin-top: -30px;
+}
+
+.user-edit-box::placeholder{
+    font-family: var(--fonte-secundaria);
+}
+
+.user-edit-box input:focus{
+    box-shadow: 0px 0px 10px #1E1E1E;
+}
+
+.name-edit{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name-edit span{
+    text-align: center;
+}
+
+.save-button{
+    width: 180px;
+    height: 40px;
+    box-shadow: 0px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--fonte-principal);
+    font-size: 100%;
+    color: var(--cor-principal);
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.save-button:hover{
+    box-shadow: 0px 0px 10px white;
+    scale: 1.01;
+}
+
+.logout{
+    height: 120px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.logout-button{
+    width: 180px;
+    height: 40px;
+    box-shadow: 0px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--fonte-principal);
+    font-size: 100%;
+    color: var(--cor-principal);
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 5%;
+}
+
+.logout-button:hover{
+    box-shadow: 0px 0px 5px white;
+    scale: 1.01;
+}
+
+/**/
+
+/*Area de perigo*/
+.danger-area{
+    min-height: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.danger-area span{
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.delete-account{
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0px;
+    background-color: rgb(255, 100, 100);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--fonte-principal);
+    font-size: 80%;
+    color: var(--cor-principal);
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 5%;
+    display: none;
+}
+
+.delete-account:hover{
+    box-shadow: 0px 0px 10px red;
+    scale: 1.01;
+}
+
+.delete-account-container{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.delete-account-confirm-box{
+    width: 50%;
+    height: 500px;
+    background-color: var(--cor-principal);
+    border-radius: 10px;
+    border: 1px solid var(--cor-secundaria);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 130%;
+}
+
+.delete-account-confirm-box span{
+    color: #DADADA;
+}
+
+.delete-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete-buttons button{
+    width: 45%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    font-family: var(--fonte-principal);
+    font-size: 80%;
+    cursor: pointer;
+}
+
+.delete-confirm{
+    background-color: rgb(255, 100, 100);
+}
+
+.delete-confirm:hover{
+    box-shadow: 0px 0px 10px red;
+    scale: 1.01;
+}
+
+.delete-danied:hover{
+    box-shadow: 0px 0px 5px white;
+    scale: 1.01;
+}
+
+/**/
+.bars{
+    cursor: pointer;
+    width: 20px;
+}
+
+.fa-left-long{
+    color: var(--cor-secundaria);
+    text-align: center;  
+    line-height: 290%;
+    cursor: pointer;
+}
+
+.i-container{
+    display: flex;
+    width: 180px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MENU*/
+.menu{
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-secundaria);
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    z-index: 3;
+    margin-left: -190px;
+    min-width: 180px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+}
+
+.menu::-webkit-scrollbar{
+    width: 5px;
+}
+.menu::-webkit-scrollbar-thumb{
+    background-color: var(--cor-secundaria);
+
+}
+
+
+/**/
+/*MAIN*/
+main{
+    width: 100%;
+    height: 90vh;
+    font-family: var(--fonte-principal);
+    display: flex;
+    position: relative;
+}
+
+.fiis-container{
+    width: 100%;
+}
+
+.lines{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro do elemento esteja no meio da tela */
+    top: 50%;
+    left: 50%;
+}
+
+.lines div{
+    background-color: rgba(30, 30, 30, 0.05);
+    width: 10px;
+    height: 100vh;
+}
+
+.main-title{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+    font-size: 120%;
+    text-align: center;
+}
+
+.fiis{
+    width: 100%;
+    height: 89%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+    padding: 50px;
+    justify-items: center;
+}
+
+.fii{
+    background-color: var(--cor-principal);
+    font-family: var(--fonte-principal);
+    width: 180px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-secundaria);
+    letter-spacing: 10px;
+    cursor: pointer;
+    font-size: 120%;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    user-select: none;
+}
+.fii:hover{
+    scale: 1.01;
+    box-shadow: 0px 0px 50px white;
+    z-index: 1;
+}
+
+.fii i{
+    position: absolute;
+    font-size: 30px;
+    right: -25px;
+    bottom: -10px;
+    z-index: 2;
+    color: rgb(0, 180, 0);
+}
+
+.select{
+    border: 1px solid var(--cor-secundaria);
+}
+
+.select:hover{
+    box-shadow: none;
+}
+
+@media(max-width: 900px){
+    .delete-account-confirm-box{
+        width: 70%;
+    }
+}
+
+@media(max-width: 600px){
+    .user-edit-box{
+        width:100%;
+    }
+    .logo{
+        font-size: 200%;
+    }
+
+    .user{
+        font-size: 100%;
+    }
+    .user-name{
+        display: none;
+    }
+    .bars{
+        width: 20px;
+        font-size: 150%;
+    }
+    .delete-account-confirm-box{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
